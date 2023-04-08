@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1072069033631",
+    "project_id": "flousi-22670",
+    "storage_bucket": "flousi-22670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072069033631:android:0b0efb5fd9b83de890acaa",
+        "android_client_info": {
+          "package_name": "com.example.flousi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072069033631-0brgvkicoqjtkq64l15n6bf8ok09l6u1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl5UTpRdwjJ9JNJiS6lrAy5RCO1mGaR_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072069033631-0brgvkicoqjtkq64l15n6bf8ok09l6u1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

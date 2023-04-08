@@ -1,0 +1,50 @@
+ {
+"language": "العربية",
+"add_new_Category":"أضف فئة جديدة",
+"new_category_name":"اسم فئة جديد",
+"category_Name":"اسم الفئة",
+"add_the_category":"أضف الفئة",
+"add_new":"أضف جديد",
+"enter_amount": "أدخل المبلغ",
+"amount":"المبلغ",
+"enter_description":"أدخل الوصف",
+"description":"الوصف",
+"you_need_to_choose_category":"تحتاج إلى اختيار فئة",
+"income":"الدخل",
+"expense":"النفقات",
+"Add_new":"أضف جديد",
+"you_selected":"لقد اخترت",
+"choose_Category_of":"اختر فئة من",
+"balence":"الرصيد",
+"loading":"جار التحميل",
+"somthing_wrong_happend":"حدث خطأ ما",
+"report":"تقرير",
+"home":"الصفحة الرئيسية",
+"settings":"الإعدادات",
+"manage_category":"إدارة الفئات",
+"choose language":"اختر اللغة",
+"choose currency":"اختر العملة",
+"logOut":"تسجيل الخروج",
+"setting":"الإعدادات",
+"enter_your_email":"أدخل بريدك الإلكتروني",
+"email":"البريد الإلكتروني",
+"password":"كلمة المرور",
+"forget_password":"نسيت كلمة المرور؟",
+"signUp":"تسجيل",
+"signIn":"تسجيل الدخول",
+"enter_your_name":"أدخل اسمك",
+"name":"الاسم",
+"confirm_password":"تأكيد كلمة المرور",
+"you_cant_do_that":"لا يمكنك فعل ذلك",
+"required": "مطلوب",
+"already_have_an_account":"لديك حساب بالفعل",
+"manage_categories":"إدارة الفئات",
+"edit":"تعديل",
+"write_category_name_or_description":"أدخل اسم الفئة أو الوصف"
+
+
+
+
+
+
+}
