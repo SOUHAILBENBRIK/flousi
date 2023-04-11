@@ -18,7 +18,16 @@ samples, guidance on mobile development, and a full API reference.
 ## Description of the project
 
 <p float="left">
-  <img src="/1.jpeg" width="100" />
-  <img src="/2.jpeg" width="100" /> 
-  <img src="/3.jpeg" width="100" />
+  <img src="/1.jpeg" width="30%" />
+  <img src="/2.jpeg" width="30%" /> 
+  <img src="/3.jpeg" width="30%" />
+</p>
+<p float="left">
+  <img src="/4.jpeg" width="30%" />
+  <img src="/5.jpeg" width="30%" /> 
+  <img src="/6.jpeg" width="30%" />
+</p>
+<p float="left">
+  <img src="/7.jpeg" width="50%" />
+  <img src="/8.jpeg" width="50%" /> 
 </p>
