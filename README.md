@@ -18,7 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 ## Description of the project
 
 <p float="left">
-  <div style="margin: 20px;"><img src="/1.jpeg" width="30%" /></div>
+  <div style="margin: 5px;"><img src="/1.jpeg" width="30%" /></div>
   <img src="/2.jpeg" width="30%" /> 
   <img src="/3.jpeg" width="30%" />
 </p>
