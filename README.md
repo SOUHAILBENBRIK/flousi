@@ -15,13 +15,10 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-#Description of the project
+## Description of the project
 
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/1.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/2.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/3.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/4.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/5.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/6.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/7.jpeg)
-![](https://github.com/SOUHAILBENBRIK/flousi/blob/master/8.jpeg)
+<p float="left">
+  <img src="/1.jpeg" width="100" />
+  <img src="/2.jpeg" width="100" /> 
+  <img src="/3.jpeg" width="100" />
+</p>
