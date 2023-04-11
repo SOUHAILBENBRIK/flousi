@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:empty_widget/empty_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -25,11 +26,12 @@ class StanderWidget {
         controller: controller,
         onChanged: onChange,
         decoration: InputDecoration(
-          border: border,
-          focusedBorder: border,
-          enabledBorder: border,
-          labelText: label, hintText: hint,prefixIcon: icon),
-
+            border: border,
+            focusedBorder: border,
+            enabledBorder: border,
+            labelText: label,
+            hintText: hint,
+            prefixIcon: icon),
         validator: (value) {
           if (value!.isEmpty) {
             return AppLocalizations.of(context)!.required;
@@ -139,7 +141,8 @@ class StanderWidget {
 
   static Widget authButton(BuildContext context,
       {required TextEditingController email,
-      required TextEditingController password,required Function() onPress}) {
+      required TextEditingController password,
+      required Function() onPress}) {
     return TextButton(
         style: TextButton.styleFrom(
             shape: const CircleBorder(), backgroundColor: Colors.teal),
@@ -167,6 +170,43 @@ class StanderWidget {
       random.nextInt(100) + 156,
       random.nextInt(100) + 156,
       random.nextInt(100) + 156,
+    );
+  }
+
+  static Widget empty({required String title, String? subtitle}) {
+    Random random = Random();
+    var list = [
+      PackageImage.Image_1,
+      PackageImage.Image_2,
+      PackageImage.Image_3,
+      PackageImage.Image_4,
+    ];
+    return Center(
+      child: EmptyWidget(
+        image: null,
+        packageImage: list[random.nextInt(list.length)],
+        title: title,
+        subTitle: subtitle,
+        titleTextStyle: const TextStyle(
+          fontSize: 18,
+          color: Color(0xff9da9c7),
+          fontWeight: FontWeight.w500,
+        ),
+        subtitleTextStyle: const TextStyle(
+          fontSize: 14,
+          color: Color(0xffabb8d6),
+        ),
+      ),
+    );
+  }
+
+  static Color generateColorReport() {
+    Random random = Random();
+    return Color.fromARGB(
+      255,
+      random.nextInt(200) + 55,
+      random.nextInt(200) + 55,
+      random.nextInt(200) + 55,
     );
   }
 

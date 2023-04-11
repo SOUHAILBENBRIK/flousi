@@ -39,5 +39,7 @@
 "already_have_an_account":"Vous avez déjà un compte",
 "manage_categories":"Gérer les catégories",
 "edit":"Modifier",
-"write_category_name_or_description":"écrire le nom de catégorie ou la description"
+"write_category_name_or_description":"écrire le nom de catégorie ou la description",
+"empty_expense_List": "Liste des dépenses vides",
+"empty_income_List": "Liste des revenus vides"
 }

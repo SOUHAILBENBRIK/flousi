@@ -42,19 +42,4 @@ class Currency {
   Currency({required this.name, this.isSelected = false, this.amount = 0});
 }
 
-List<Language> languages = [
-  Language(name: "english", isSelected: true, code: "en"),
-  Language(
-    name: "french",
-    code: "fr",
-  ),
-  Language(
-    name: "arabic",
-    code: "ar",
-  ),
-];
-List<Currency> currency = [
-  Currency(name: "dnt", amount: 1, isSelected: true),
-  Currency(name: "dollar", amount: 3.3),
-  Currency(name: "euro", amount: 3.2)
-];
+

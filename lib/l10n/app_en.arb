@@ -43,7 +43,10 @@
     "already_have_an_account":"Already have an account",
     "manage_categories":"Manage category",
     "edit":"edit",
-    "write_category_name_or_description":"write category name or description"
+    "write_category_name_or_description":"write category name or description",
+    "empty_expense_List":"empty expense List",
+    "empty_income_List":"empty income List"
+
 
 
 

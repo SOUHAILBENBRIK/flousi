@@ -1,9 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flousi/controller/setting_controller.dart';
 import 'package:flousi/model/settings.dart';
+import 'package:flousi/model/sqflite/category.dart';
+import 'package:flousi/model/sqflite/money_flow.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:system_theme/system_theme.dart';
 
 class SettingPage extends StatelessWidget {
@@ -20,11 +23,11 @@ class SettingPage extends StatelessWidget {
             icon: Icons.category_outlined,
             text: AppLocalizations.of(context)!.manage_category,
             route: 'manageCategory'),
-        toggleButton1(context,
-            object: languages,
+        languageToggleButton(context,
+            object: Provider.of<SettingController>(context).languages,
             name: AppLocalizations.of(context)!.choose_language),
         toggleButton(context,
-            object: currency,
+            object: Provider.of<SettingController>(context).currency,
             name: AppLocalizations.of(context)!.choose_currency),
         logOutButton(context,
             icon: Icons.logout, text: AppLocalizations.of(context)!.logOut),
@@ -95,8 +98,12 @@ Widget button(BuildContext context,
 Widget logOutButton(BuildContext context,
     {required IconData icon, required String text}) {
   return ListTile(
-    onTap: () {
+    onTap: () async {
       FirebaseAuth.instance.signOut();
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('myIntValue', 0);
+      MoneyFlowDatabase.instance.clearDatabase();
+      CategoryDatabase.instance.clearDatabase();
       //Navigator.pushReplacementNamed(context, "");
     },
     leading: Icon(icon),
@@ -107,7 +114,7 @@ Widget logOutButton(BuildContext context,
   );
 }
 
-Widget toggleButton1(BuildContext context,
+Widget languageToggleButton(BuildContext context,
     {required List<Language> object, required String name}) {
   final darkMode = SystemTheme.isDarkMode;
   return Container(
@@ -134,10 +141,12 @@ Widget toggleButton1(BuildContext context,
             fillColor: darkMode ? Colors.blueGrey : Colors.teal,
             //color: darkMode ? Colors.red : Colors.green,
             isSelected: object.map((e) => e.isSelected).toList(),
-            children: object.map((e) => Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Text(e.name),
-            )).toList()),
+            children: object
+                .map((e) => Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(e.name),
+                    ))
+                .toList()),
         const SizedBox(
           width: 10,
         )
@@ -162,16 +171,18 @@ Widget toggleButton(BuildContext context,
           ),
         ),
         ToggleButtons(
-            onPressed: (index) {},
+            onPressed: Provider.of<SettingController>(context, listen: false).changeStateOfCurrency,
             borderRadius: const BorderRadius.all(Radius.circular(10)),
             selectedColor: darkMode ? Colors.white : Colors.black,
             fillColor: darkMode ? Colors.blueGrey : Colors.teal,
             //color: darkMode ? Colors.red : Colors.green,
             isSelected: object.map((e) => e.isSelected).toList(),
-            children: object.map((e) => Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Text(e.name),
-            )).toList()),
+            children: object
+                .map((e) => Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(e.name),
+                    ))
+                .toList()),
         const SizedBox(
           width: 10,
         )

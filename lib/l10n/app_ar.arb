@@ -40,7 +40,9 @@
 "already_have_an_account":"لديك حساب بالفعل",
 "manage_categories":"إدارة الفئات",
 "edit":"تعديل",
-"write_category_name_or_description":"أدخل اسم الفئة أو الوصف"
+"write_category_name_or_description":"أدخل اسم الفئة أو الوصف",
+"empty_expense_List": "قائمة المصروفات فارغة",
+"empty_income_List": "قائمة الدخل فارغة"
 
 
 

@@ -62,7 +62,6 @@ class MoneyFlowDatabase {
   Future<List<MoneyFlow>> readsMoneyFlow(
       {required String date, required int expenseOrIncome}) async {
     final db = await instance.database;
-
     final results = await db.query(tableMoneyFlow,
         columns: MoneyFlowFields.values,
         where:
@@ -81,6 +80,12 @@ class MoneyFlowDatabase {
     final db = await instance.database;
     return db.delete(tableMoneyFlow,
         where: "${MoneyFlowFields.id}=?", whereArgs: [id]);
+  }
+
+  void clearDatabase() async {
+    final db = await instance.database;
+    // Delete the database.
+    await db.delete(tableMoneyFlow);
   }
 
   Future close() async {

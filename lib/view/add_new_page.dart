@@ -158,9 +158,10 @@ Widget dropDown(BuildContext context, {required double width}) {
         ),
       ],
       onChanged: (value) {
-        Provider.of<CategoryController>(context, listen: false)
-            .setExpenseOfIncome = value!;
-        debugPrint("You selected $value");
+        CategoryController provider =
+      Provider.of<CategoryController>(context, listen: false);
+        provider.setExpenseOfIncome = value!;
+       if( provider.getCategory!=null)provider.setCategory = value==0?categoriesExpense[0]:categoriesIncome[0];
       },
     ),
   );

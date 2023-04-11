@@ -13,13 +13,10 @@ class InitPage extends StatefulWidget {
 }
 
 class _InitPageState extends State<InitPage> {
-   @override
-  void initState() {
-    super.initState();
-    
-  }
+  
+
   int _currentIndex = 1;
-  List<Widget> list = const  [
+  List<Widget> list = const [
     ReportPage(),
     HomePage(),
     SettingPage(),

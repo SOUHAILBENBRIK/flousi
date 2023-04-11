@@ -141,7 +141,10 @@ Widget thirdBloc(BuildContext context, {int expenceOrIncome = 0}) {
             return Text(AppLocalizations.of(context)!.somthing_wrong_happend);
           } else if (snapShot.hasData) {
             if (snapShot.data!.isEmpty) {
-              return const Text("there is no element yet ");
+              return StanderWidget.empty(
+                  title: expenceOrIncome == 0
+                      ? AppLocalizations.of(context)!.empty_expense_List
+                      : AppLocalizations.of(context)!.empty_income_List);
             } else {
               return ListView.builder(
                 itemCount: snapShot.data!.length,

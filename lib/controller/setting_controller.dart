@@ -1,5 +1,4 @@
 import 'package:flousi/l10n/l10n.dart';
-import 'package:flousi/model/categories.dart';
 import 'package:flousi/model/settings.dart';
 
 import 'package:flutter/material.dart';
@@ -7,16 +6,23 @@ import 'package:flutter/material.dart';
 import '../model/shared_preferences/language.dart';
 
 class SettingController with ChangeNotifier {
-  late SystemType type;
-  Locale _locale = const Locale("en");
+  Locale? _locale;
+  List<Language> languages = [
+  Language(name: "english", isSelected: true, code: "en"),
+  Language(name: "french",code: "fr",),
+  Language(name: "arabic",code: "ar",)];
+List<Currency> currency = [
+  Currency(name: "dnt", amount: 1, isSelected: true),
+  Currency(name: "dollar", amount: 3.3),
+  Currency(name: "euro", amount: 3.2)
+];
 
-  Locale get locale => _locale;
-  void initLocale() async {
-    int index = 0;
+  Locale? get locale => _locale;
+  void initLocale() {
     getIntValue().then((value) {
-      index = value;
       _locale = L10n.all[value];
-      changeStateOfLanguage(index);
+      debugPrint("$value");
+      changeStateOfLanguage(value);
     });
 
     notifyListeners();
@@ -25,6 +31,7 @@ class SettingController with ChangeNotifier {
   void setLocale(Locale locale) async {
     if (!L10n.all.contains(locale)) return;
     saveIntValue(L10n.all.indexOf(locale));
+    debugPrint(L10n.all.indexOf(locale).toString());
     _locale = locale;
     notifyListeners();
   }
@@ -38,13 +45,13 @@ class SettingController with ChangeNotifier {
     notifyListeners();
   }
 
-  void clearLocale() {
-    _locale = const Locale("en");
-    notifyListeners();
-  }
+  void changeStateOfCurrency(int index) {
+    for (var element in currency) {
+      element.isSelected = false;
+    }
+    currency[index].isSelected = true;
+    debugPrint(index.toString());
 
-  changeType(SystemType val) {
-    type = val;
     notifyListeners();
   }
 }

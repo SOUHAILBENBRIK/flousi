@@ -69,6 +69,11 @@ class CategoryDatabase {
     return db.delete(tableCategory,
         where: '${CategoryFields.id}=?', whereArgs: [id]);
   }
+  void clearDatabase() async {
+    final db = await instance.database;
+    // Delete the database.
+    await db.delete(tableCategory);
+  }
 
   Future close() async {
     final db = await instance.database;
