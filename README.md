@@ -34,9 +34,9 @@ Hey everyone! 🎉 I wanted to share some exciting news with you all. This year,
   <img src="/5.jpeg" width="30%" />
 </p>
 <p float="left">
-  <img src="/6.jpeg" width="40%" />
-  <img src="/6w.jpeg" width="40%" />
-  <img src="/7.jpeg" width="40%" /> 
+  <img src="/6.jpeg" width="30%" />
+  <img src="/6w.jpeg" width="30%" />
+  <img src="/7.jpeg" width="30%" /> 
 </p>
 <p float="left">
   <img src="/8.jpeg" width="40%" />
