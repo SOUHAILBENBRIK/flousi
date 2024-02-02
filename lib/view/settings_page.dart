@@ -14,7 +14,7 @@ class SettingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final darkMode = SystemTheme.isDarkMode;
+    final darkMode = false;
     final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       body: Column(children: [
@@ -116,7 +116,7 @@ Widget logOutButton(BuildContext context,
 
 Widget languageToggleButton(BuildContext context,
     {required List<Language> object, required String name}) {
-  final darkMode = SystemTheme.isDarkMode;
+  final darkMode = false;
   return Container(
     padding: const EdgeInsets.all(10),
     child: Row(
@@ -157,7 +157,7 @@ Widget languageToggleButton(BuildContext context,
 
 Widget toggleButton(BuildContext context,
     {required List<Currency> object, required String name}) {
-  final darkMode = SystemTheme.isDarkMode;
+  final darkMode = false;
   return Container(
     padding: const EdgeInsets.all(10),
     child: Row(
